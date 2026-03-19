@@ -1,0 +1,9 @@
+{
+	"name": "azure-df-p",
+	"location": "uksouth",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "42449adf-60d7-4b2e-bfa6-c52307c628dc",
+		"tenantId": "c2ade505-1511-49e8-a72d-73e493f6f28d"
+	}
+}
