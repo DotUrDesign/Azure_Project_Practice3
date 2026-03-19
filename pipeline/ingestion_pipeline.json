@@ -21,8 +21,8 @@
 				}
 			},
 			{
-				"name": "last_cdc",
-				"type": "GetMetadata",
+				"name": "Get Last CDC",
+				"type": "Lookup",
 				"dependsOn": [],
 				"policy": {
 					"timeout": "0.12:00:00",
@@ -33,6 +33,17 @@
 				},
 				"userProperties": [],
 				"typeProperties": {
+					"source": {
+						"type": "JsonSource",
+						"storeSettings": {
+							"type": "AzureBlobFSReadSettings",
+							"recursive": true,
+							"enablePartitionDiscovery": false
+						},
+						"formatSettings": {
+							"type": "JsonReadSettings"
+						}
+					},
 					"dataset": {
 						"referenceName": "getLastCDC",
 						"type": "DatasetReference",
@@ -41,14 +52,6 @@
 							"folder": "cdc",
 							"file": "cdc.json"
 						}
-					},
-					"fieldList": [],
-					"storeSettings": {
-						"type": "AzureBlobFSReadSettings",
-						"enablePartitionDiscovery": false
-					},
-					"formatSettings": {
-						"type": "JsonReadSettings"
 					}
 				}
 			}
