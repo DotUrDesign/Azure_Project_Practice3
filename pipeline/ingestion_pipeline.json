@@ -135,6 +135,8 @@
 			{
 				"name": "If Recs Present",
 				"type": "IfCondition",
+				"state": "Inactive",
+				"onInactiveMarkAs": "Succeeded",
 				"dependsOn": [
 					{
 						"activity": "Copy DB To DataLake",
